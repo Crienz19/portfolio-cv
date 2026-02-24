@@ -1,5 +1,7 @@
 import type { CvData } from '@/types'
 
+const base = import.meta.env.BASE_URL
+
 export const cv: CvData = {
   name: 'RENZ MERGENIO',
   title: 'Full Stack Web Developer',
@@ -10,8 +12,8 @@ export const cv: CvData = {
   phone: '+63 912 2475 516',
   location: 'Philippines',
   availability: 'Open to opportunities',
-  profileImage: '/images/renzdp.jpeg',
-  resumeUrl: '/resume/2025_RENZ_MERGENIO_CV.pdf',
+  profileImage: `${base}images/renzdp.jpeg`,
+  resumeUrl: `${base}resume/2025_RENZ_MERGENIO_CV.pdf`,
   stats: [
     { label: 'Years of Experience', value: '7+' },
     { label: 'Projects Completed', value: '7+' },
@@ -159,7 +161,7 @@ export const cv: CvData = {
       title: 'Beneficial Ownership Registry Website',
       description:
         'A secure and compliance-focused web platform that automates the collection, management, and reporting of beneficial ownership data with role-based access control, centralized administration, and integrated authentication and document processing.',
-      image: '/images/project-one.svg',
+      image: `${base}images/project-one.svg`,
       tags: ['PHP', 'Laravel', 'Laravel Filament', 'ReactJS', 'MySQL', 'Tailwind CSS', 'Keycloak'],
       liveUrl: '',
       repoUrl: '',
@@ -171,7 +173,7 @@ export const cv: CvData = {
       title: 'Custom CMS Drupal Website',
       description:
         'Developed a custom Drupal 10 website with a tailored theme, implementing responsive layouts, integrating design assets, and creating reusable template pages to deliver a visually aligned and content-ready platform.',
-      image: '/images/project-two.svg',
+      image: `${base}images/project-two.svg`,
       tags: ['Drupal', 'PHP', 'MySQL', 'Tailwind CSS', 'JavaScript'],
       liveUrl: '',
       repoUrl: '',
@@ -183,7 +185,7 @@ export const cv: CvData = {
         title: 'Game Launcher Application',
         description:
           'Developed a cross-platform game launcher with a Laravel-powered backend and Electron-based frontend, featuring secure version-controlled game distribution, multi-provider social authentication, and Web3 wallet integration for enhanced user access and management.',
-        image: '/images/project-three.svg',
+        image: `${base}images/project-three.svg`,
         tags: ['Electron JS', 'ReactJS', 'TypeScript', 'Tailwind CSS', 'Web3', 'Laravel', 'MySQL'],
         liveUrl: '',
         repoUrl: '',
@@ -195,7 +197,7 @@ export const cv: CvData = {
         title: 'Raffle and Top-up Website',
         description:
           'Developed and maintained a Laravel-based backend system providing RESTful APIs for a raffle and top-up platform, implementing core transaction and winner-selection logic and supporting daily active users through reliable system integration.',
-        image: '/images/project-four.svg',
+        image: `${base}images/project-four.svg`,
         tags: ['Laravel', 'MySQL', 'Tailwind CSS', 'Pusher'],
         liveUrl: '',
         repoUrl: '',
@@ -207,7 +209,7 @@ export const cv: CvData = {
         title: 'Website & Client/Admin Portal',
         description:
           'Developed and deployed a responsive client/admin portal using Laravel and Vue.js that digitized manual processes, enabled secure user management and document handling, integrated automated email notifications, and supported over 10,000 clients annually.',
-        image: '/images/project-five.png',
+        image: `${base}images/project-five.png`,
         tags: ['PHP', 'Laravel', 'Typescript', 'Vue.js', 'MySQL', 'Bootstrap', 'AdminLTE'],
         liveUrl: 'https://www.ziptravel.ph/',
         repoUrl: '',
@@ -219,7 +221,7 @@ export const cv: CvData = {
         title: 'Student & Client/Admin Portal',
         description:
           'Developed a secure and responsive student and client portal using Laravel and Vue.js that automated document handling and PDF certificate generation, transitioned manual processes to a fully digital system, and supported high usage with approximately 1,000 certificate downloads quarterly.',
-        image: '/images/project-six.png',
+        image: `${base}images/project-six.png`,
         tags: ['PHP', 'Laravel', 'InertiaJS', 'Vue.js', 'MySQL', 'Bootstrap', 'AdminLTE'],
         liveUrl: 'https://hospitalityinstituteofamerica.com.ph/',
         repoUrl: '',
@@ -231,7 +233,7 @@ export const cv: CvData = {
         title: 'Internal HR Filing & Approval Portal',
         description:
           'Developed and deployed a company-wide HR filing and approval portal using Laravel and Vue.js to automate overtime, leave, and business trip workflows, streamlining HR validation processes and supporting 40+ employees across the organization.',
-        image: '/images/project-seven.svg',
+        image: `${base}images/project-seven.svg`,
         tags: ['PHP', 'Laravel', 'NuxtJS', 'MySQL', 'MaterialUI'],
         liveUrl: '',
         repoUrl: '',
@@ -243,7 +245,7 @@ export const cv: CvData = {
         title: 'ERPNext Frappe Module Development',
         description:
           'Developed a custom ERPNext module using the Frappe framework to manage financing operations, including financial reporting and third-party API integration for data synchronization, streamlining financial processes for the client.',
-        image: '/images/project-eight.png',
+        image: `${base}images/project-eight.png`,
         tags: ['Python', 'Frappe', 'ERPNext', 'MySQL', 'JavaScript'],
         liveUrl: '',
         repoUrl: '',

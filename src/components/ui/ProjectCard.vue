@@ -3,6 +3,8 @@ import { ExternalLink, Github } from 'lucide-vue-next'
 import type { Project } from '@/types'
 
 defineProps<{ project: Project }>()
+
+const base = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -14,7 +16,7 @@ defineProps<{ project: Project }>()
         :alt="project.title"
         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
-        onerror="this.src='/images/project-placeholder.jpg'"
+        @error="(e) => ((e.target as HTMLImageElement).src = `${base}images/project-placeholder.jpg`)"
       />
       <!-- Overlay on hover -->
       <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-end p-3 gap-2">
