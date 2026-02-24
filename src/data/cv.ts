@@ -211,7 +211,7 @@ export const cv: CvData = {
           'Developed and deployed a responsive client/admin portal using Laravel and Vue.js that digitized manual processes, enabled secure user management and document handling, integrated automated email notifications, and supported over 10,000 clients annually.',
         image: `${base}images/project-five.png`,
         tags: ['PHP', 'Laravel', 'Typescript', 'Vue.js', 'MySQL', 'Bootstrap', 'AdminLTE'],
-        liveUrl: 'https://www.ziptravel.ph/',
+        liveUrl: 'https://www.ziptravel.com.ph/',
         repoUrl: '',
         hasFooter: true,
         featured: true,
