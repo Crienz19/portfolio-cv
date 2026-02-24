@@ -13,7 +13,7 @@ export const cv: CvData = {
   location: 'Philippines',
   availability: 'Open to opportunities',
   profileImage: `${base}images/renzdp.jpeg`,
-  resumeUrl: `${base}resume/2025_RENZ_MERGENIO_CV.pdf`,
+  resumeUrl: `https://drive.google.com/uc?export=download&id=1IXipC_sZb_m2xYByWSKLChJCh-FgV_6s`,
   stats: [
     { label: 'Years of Experience', value: '7+' },
     { label: 'Projects Completed', value: '7+' },
