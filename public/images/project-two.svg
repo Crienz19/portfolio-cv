@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Custom CMS Drupal website mockup">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fbfdff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#0aa0df"/>
+      <stop offset="1" stop-color="#2b8cc4"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .font { font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial; }
+      .muted { fill: #6b7280; }
+      .title { fill: #071133; font-weight:700; font-size:16px; }
+      .small { font-size:12px; fill:#374151; }
+      .card { rx:12; filter: url(#softShadow); }
+      .sidebar-text { fill:#ffffff; font-size:13px; }
+      .btn { rx:8; fill:#0aa0df; }
+      .chip { rx:8; fill:#eef9ff; stroke:none; }
+      .panel-bg { fill:#fbfdff; }
+      .meta { font-size:11px; fill:#9aa4b2; }
+    </style>
+  </defs>
+
+  <!-- Transparent background: no full-canvas rectangle so PNG export stays transparent -->
+
+  <!-- Left CMS admin toolbar -->
+  <rect x="20" y="20" width="220" height="860" rx="16" fill="#082136" filter="url(#softShadow)"/>
+  <g transform="translate(36,44)">
+    <text class="font sidebar-text" x="0" y="0" font-size="20" font-weight="700">DrupalCMS</text>
+    <g transform="translate(0,40)" fill="#9fb6cc">
+      <text class="font sidebar-text" x="0" y="24">Content</text>
+      <text class="font sidebar-text" x="0" y="64">Structure</text>
+      <text class="font sidebar-text" x="0" y="104">Appearance</text>
+      <text class="font sidebar-text" x="0" y="144">Modules</text>
+      <text class="font sidebar-text" x="0" y="184">People</text>
+      <text class="font sidebar-text" x="0" y="224">Config</text>
+    </g>
+    <!-- stylized drop icon (inspired shape, not exact logo) -->
+    <g transform="translate(12,540)">
+      <path d="M44 0 C60 24 68 44 44 84 C20 44 28 24 44 0 Z" fill="#0aa0df" opacity="0.95" />
+      <circle cx="44" cy="24" r="6" fill="#ffffff" opacity="0.18"/>
+    </g>
+  </g>
+
+  <!-- Topbar -->
+  <rect x="260" y="20" width="1116" height="64" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+  <g transform="translate(282,40)">
+    <text class="font title" x="0" y="18">Site Manager — Example.com</text>
+    <rect x="740" y="-10" width="320" height="40" rx="10" fill="#f3f7fb"/>
+    <text class="font muted" x="750" y="18">Search content, pages, or modules...</text>
+    <rect x="1100" y="-10" width="80" height="40" rx="10" fill="#0aa0df"/>
+    <text class="font" x="1136" y="18" fill="#fff" font-size="13">Edit</text>
+  </g>
+
+  <!-- Main workspace -->
+  <g transform="translate(260,104)">
+    <!-- Left column: editor + sidebar -->
+    <rect x="0" y="0" width="820" height="636" rx="16" fill="transparent"/>
+
+    <!-- Content editor card -->
+    <rect x="0" y="0" width="520" height="280" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+    <g transform="translate(20,18)">
+      <text class="small font muted" x="0" y="14">Content</text>
+      <text class="font title" x="0" y="40">Edit: Home — Front Page</text>
+
+      <!-- form fields -->
+      <g transform="translate(0,66)">
+        <rect x="0" y="0" width="480" height="40" rx="8" fill="#fbfdff"/>
+        <text class="muted font small" x="12" y="26">Title: Welcome to Our Site</text>
+
+        <rect x="0" y="56" width="480" height="120" rx="8" fill="#fbfdff"/>
+        <text class="muted font small" x="12" y="84">Body: <tspan font-weight="600" fill="#071133">This is the hero section — editable WYSIWYG area.</tspan></text>
+
+        <g transform="translate(0,188)">
+          <rect x="0" y="0" width="220" height="36" rx="8" class="chip"/>
+          <text class="small font" x="12" y="24" fill="#0aa0df">Published</text>
+          <rect x="240" y="0" width="116" height="36" rx="8" class="btn"/>
+          <text class="small font" x="268" y="24" fill="#fff">Save</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Page preview card -->
+    <rect x="540" y="0" width="280" height="280" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+    <g transform="translate(560,18)">
+      <text class="small font muted" x="0" y="14">Preview</text>
+      <text class="font title" x="0" y="40">Live Preview</text>
+      <rect x="0" y="56" width="240" height="160" rx="8" fill="#fbfdff"/>
+      <!-- hero mock -->
+      <rect x="12" y="68" width="216" height="56" rx="6" fill="#e8f7ff"/>
+      <text class="font" x="24" y="100" fill="#0b3b53" font-size="13">Hero headline — Example Company</text>
+    </g>
+
+    <!-- Right column: modules + theme settings -->
+    <g transform="translate(0,312)">
+      <!-- Modules list -->
+      <rect x="0" y="0" width="360" height="268" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+      <g transform="translate(20,18)">
+        <text class="small font muted" x="0" y="14">Extend</text>
+        <text class="font title" x="0" y="40">Installed Modules</text>
+
+        <g transform="translate(0,64)" class="small font muted">
+          <g>
+            <rect x="0" y="0" width="320" height="40" rx="8" fill="#fbfdff"/>
+            <text x="54" y="26" fill="#071133">Views</text>
+            <text x="260" y="26" class="meta">Enabled</text>
+            <rect x="12" y="8" width="28" height="24" rx="6" fill="#eef8ff" stroke="#0aa0df" />
+          </g>
+          <g transform="translate(0,52)">
+            <rect x="0" y="0" width="320" height="40" rx="8" fill="#fbfdff"/>
+            <text x="54" y="26" fill="#071133">Pathauto</text>
+            <text x="260" y="26" class="meta">Enabled</text>
+            <rect x="12" y="8" width="28" height="24" rx="6" fill="#fff4e6" stroke="#ffb56b" />
+          </g>
+          <g transform="translate(0,104)">
+            <rect x="0" y="0" width="320" height="40" rx="8" fill="#fbfdff"/>
+            <text x="54" y="26" fill="#071133">Metatag</text>
+            <text x="260" y="26" class="meta">Disabled</text>
+            <rect x="12" y="8" width="28" height="24" rx="6" fill="#fff7f7" stroke="#ef4444" />
+          </g>
+        </g>
+      </g>
+
+      <!-- Theme settings -->
+      <rect x="380" y="0" width="420" height="268" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+      <g transform="translate(400,18)">
+        <text class="small font muted" x="0" y="14">Appearance</text>
+        <text class="font title" x="0" y="40">Theme Settings</text>
+
+        <g transform="translate(0,64)">
+          <rect x="0" y="0" width="196" height="40" rx="8" fill="#fbfdff"/>
+          <text class="muted font small" x="12" y="26">Primary color</text>
+          <rect x="220" y="0" width="120" height="40" rx="8" fill="url(#accent)"/>
+          <text class="small font" x="248" y="26" fill="#fff">#0aa0df</text>
+
+          <g transform="translate(0,56)">
+            <rect x="0" y="0" width="360" height="44" rx="8" fill="#fbfdff"/>
+            <text class="muted font small" x="12" y="30">Header layout: <tspan font-weight="600" fill="#071133">Centered</tspan></text>
+          </g>
+
+          <g transform="translate(0,116)">
+            <rect x="0" y="0" width="360" height="44" rx="8" fill="#fbfdff"/>
+            <text class="muted font small" x="12" y="30">Footer: <tspan font-weight="600" fill="#071133">Simplified</tspan></text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Right-most visual: page slots/blocks -->
+    <g transform="translate(540,312)">
+      <rect x="0" y="0" width="280" height="268" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+      <g transform="translate(16,18)">
+        <text class="small font muted" x="0" y="14">Layout</text>
+        <text class="font title" x="0" y="40">Page Blocks</text>
+
+        <g transform="translate(0,64)" class="small font muted">
+          <rect x="0" y="0" width="248" height="44" rx="8" fill="#fbfdff"/>
+          <text x="12" y="28" fill="#071133">Hero (region: header)</text>
+          <rect x="0" y="60" width="248" height="44" rx="8" fill="#fbfdff"/>
+          <text x="12" y="88" fill="#071133">Featured articles (region: content)</text>
+          <rect x="0" y="120" width="248" height="44" rx="8" fill="#fbfdff"/>
+          <text x="12" y="148" fill="#071133">Footer links (region: footer)</text>
+        </g>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Footer small -->
+  <g transform="translate(260,760)" class="small muted font">
+    <text x="0" y="0">Last updated: 2026-02-24 09:12 UTC — Custom Drupal CMS mockup</text>
+  </g>
+</svg>

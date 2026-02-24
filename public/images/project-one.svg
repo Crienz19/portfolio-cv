@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Admin dashboard mockup">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#f7fbff"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#fbfdff"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#4f8cff"/>
+      <stop offset="1" stop-color="#7b6bff"/>
+    </linearGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#000" flood-opacity="0.08"/>
+    </filter>
+    <style>
+      .font { font-family: Inter, "Segoe UI", Roboto, system-ui, -apple-system, "Helvetica Neue", Arial; }
+      .muted { fill: #7b8490; }
+      .title { fill: #0f1724; font-weight:700; font-size:16px; }
+      .small { font-size:12px; fill:#394251; }
+      .card { rx:12; filter: url(#softShadow); }
+      .sidebar-text { fill:#ffffff; font-size:13px; }
+      .metric-value { font-size:20px; font-weight:700; fill:#0f1724; }
+      .metric-label { font-size:12px; fill:#7b8490; }
+      .chip { rx:8; fill:#eef3ff; stroke:none; }
+      .dot { r:4; fill:#fff; stroke:#7b6bff; stroke-width:2; }
+      .axis { stroke:#e6e9ef; stroke-width:1; }
+      .grid { stroke:#f1f3f6; stroke-width:1; }
+      .bar { rx:4; }
+      .table-row { fill:#ffffff; }
+      .table-odd { fill:#fbfdff; }
+    </style>
+  </defs>
+
+  <!-- Transparent background: no background rectangle so the SVG is transparent -->
+
+  <!-- Sidebar -->
+  <rect x="24" y="24" width="220" height="852" rx="16" fill="#0f1724" filter="url(#softShadow)"/>
+  <g transform="translate(44,48)">
+    <text class="font sidebar-text" x="0" y="0" font-size="20" font-weight="700">Adminly</text>
+    <g transform="translate(0,36)" fill="#93a3b8">
+      <text class="font sidebar-text" x="0" y="24">Dashboard</text>
+      <text class="font sidebar-text" x="0" y="64">Analytics</text>
+      <text class="font sidebar-text" x="0" y="104">Users</text>
+      <text class="font sidebar-text" x="0" y="144">Settings</text>
+    </g>
+    <circle cx="16" cy="400" r="36" fill="#1e293b" opacity="0.08"/>
+  </g>
+
+  <!-- Topbar -->
+  <rect x="260" y="24" width="1116" height="64" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+  <g transform="translate(282,44)">
+    <text class="font title" x="0" y="18">Overview</text>
+    <rect x="790" y="-8" width="280" height="40" rx="10" fill="#f3f6fb"/>
+    <text class="font muted" x="800" y="18">Search or quick action...</text>
+    <circle cx="1088" cy="8" r="16" fill="#ffd" stroke="#ffcf6b" stroke-width="2"/>
+  </g>
+
+  <!-- Metric cards -->
+  <g transform="translate(260,104)">
+    <!-- Card 1 -->
+    <rect class="card" x="0" y="0" width="320" height="96" fill="url(#cardGrad)" />
+    <g transform="translate(18,18)">
+      <text class="metric-label font" x="0" y="14">Active Users</text>
+      <text class="metric-value font" x="0" y="44">12,482</text>
+      <rect x="200" y="16" width="92" height="36" rx="8" class="chip"/>
+      <text class="small font" x="210" y="40" fill="#3b82f6">+5.2%</text>
+    </g>
+
+    <!-- Card 2 -->
+    <rect class="card" x="344" y="0" width="320" height="96" fill="url(#cardGrad)" />
+    <g transform="translate(362,18)">
+      <text class="metric-label font" x="0" y="14">Monthly Revenue</text>
+      <text class="metric-value font" x="0" y="44">$84,120</text>
+      <rect x="200" y="16" width="92" height="36" rx="8" class="chip"/>
+      <text class="small font" x="210" y="40" fill="#10b981">+8.3%</text>
+    </g>
+
+    <!-- Card 3 -->
+    <rect class="card" x="688" y="0" width="320" height="96" fill="url(#cardGrad)" />
+    <g transform="translate(706,18)">
+      <text class="metric-label font" x="0" y="14">New Signups</text>
+      <text class="metric-value font" x="0" y="44">1,214</text>
+      <rect x="200" y="16" width="92" height="36" rx="8" class="chip"/>
+      <text class="small font" x="210" y="40" fill="#ef4444">-2.1%</text>
+    </g>
+
+    <!-- Card 4 -->
+    <rect class="card" x="1032" y="0" width="320" height="96" fill="url(#cardGrad)" />
+    <g transform="translate(1050,18)">
+      <text class="metric-label font" x="0" y="14">Server Uptime</text>
+      <text class="metric-value font" x="0" y="44">99.97%</text>
+      <rect x="200" y="16" width="92" height="36" rx="8" fill="#eefde8"/>
+      <text class="small font" x="210" y="40" fill="#059669">+0.01%</text>
+    </g>
+  </g>
+
+  <!-- Main content area -->
+  <g transform="translate(260,224)">
+    <!-- Left column (charts) -->
+    <rect x="0" y="0" width="800" height="512" rx="16" fill="transparent" />
+
+    <!-- Line chart card -->
+    <rect x="0" y="0" width="520" height="248" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+    <g transform="translate(20,16)">
+      <text class="small font muted" x="0" y="14">User Growth</text>
+      <text class="font title" x="0" y="40">Weekly Active Users</text>
+
+      <!-- grid + axes -->
+      <g transform="translate(0,56)">
+        <rect x="0" y="0" width="480" height="160" rx="8" fill="#fbfdff"/>
+        <g>
+          <line class="grid" x1="0" y1="20" x2="480" y2="20"/>
+          <line class="grid" x1="0" y1="60" x2="480" y2="60"/>
+          <line class="grid" x1="0" y1="100" x2="480" y2="100"/>
+          <line class="grid" x1="0" y1="140" x2="480" y2="140"/>
+        </g>
+
+        <!-- line path -->
+        <path d="M0,120 C48,92 96,80 144,68 C192,56 240,52 288,62 C336,74 384,48 432,40 C480,36 528,48 576,36"
+              transform="scale(0.8333333,1)" fill="none" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- markers -->
+        <g transform="scale(0.8333333,1)">
+          <circle cx="0" cy="120" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="48" cy="92" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="96" cy="80" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="144" cy="68" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="192" cy="56" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="240" cy="52" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="288" cy="62" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="336" cy="74" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="384" cy="48" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+          <circle cx="432" cy="40" r="5" fill="#fff" stroke="#7b6bff" stroke-width="2"/>
+        </g>
+
+        <!-- x labels -->
+        <g transform="translate(0,170)" class="small muted font">
+          <text x="0" y="14">Mon</text>
+          <text x="60" y="14">Tue</text>
+          <text x="120" y="14">Wed</text>
+          <text x="180" y="14">Thu</text>
+          <text x="240" y="14">Fri</text>
+          <text x="300" y="14">Sat</text>
+          <text x="360" y="14">Sun</text>
+        </g>
+
+      </g>
+    </g>
+
+    <!-- Bar chart card -->
+    <rect x="540" y="0" width="260" height="248" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+    <g transform="translate(560,16)">
+      <text class="small font muted" x="0" y="14">Revenue</text>
+      <text class="font title" x="0" y="40">Last 6 Months</text>
+      <g transform="translate(0,56)">
+        <rect x="0" y="0" width="220" height="160" rx="8" fill="#fbfdff"/>
+        <!-- bars -->
+        <rect class="bar" x="12" y="90" width="22" height="60" fill="#60a5fa"/>
+        <rect class="bar" x="46" y="70" width="22" height="80" fill="#4f8cff"/>
+        <rect class="bar" x="80" y="50" width="22" height="100" fill="#7b6bff"/>
+        <rect class="bar" x="114" y="60" width="22" height="90" fill="#60a5fa"/>
+        <rect class="bar" x="148" y="40" width="22" height="110" fill="#4f8cff"/>
+        <rect class="bar" x="182" y="80" width="22" height="70" fill="#7b6bff"/>
+        <g class="small muted font" transform="translate(0,140)">
+          <text x="8" y="14">Jan</text>
+          <text x="42" y="14">Feb</text>
+          <text x="78" y="14">Mar</text>
+          <text x="112" y="14">Apr</text>
+          <text x="146" y="14">May</text>
+          <text x="180" y="14">Jun</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Right column (tables / lists) -->
+    <g transform="translate(820,0)">
+      <!-- Recent activity -->
+      <rect x="0" y="0" width="276" height="248" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+      <g transform="translate(16,16)">
+        <text class="small muted font" x="0" y="14">Activity</text>
+        <text class="font title" x="0" y="40">Recent Activity</text>
+
+        <g transform="translate(0,56)" class="small font muted">
+          <g>
+            <rect x="0" y="0" width="244" height="40" rx="8" class="table-row"/>
+            <text x="56" y="24" fill="#0f1724">John Doe signed up</text>
+            <text x="56" y="38" class="muted" font-size="11">10m ago</text>
+            <circle cx="20" cy="20" r="16" fill="#eef2ff" stroke="#7b6bff" stroke-width="2"/>
+          </g>
+          <g transform="translate(0,52)">
+            <rect x="0" y="0" width="244" height="40" rx="8" class="table-odd"/>
+            <text x="56" y="24" fill="#0f1724">Payment processed</text>
+            <text x="56" y="38" class="muted" font-size="11">1h ago</text>
+            <circle cx="20" cy="20" r="16" fill="#e6fff2" stroke="#10b981" stroke-width="2"/>
+          </g>
+          <g transform="translate(0,104)">
+            <rect x="0" y="0" width="244" height="40" rx="8" class="table-row"/>
+            <text x="56" y="24" fill="#0f1724">New comment on ticket</text>
+            <text x="56" y="38" class="muted" font-size="11">2h ago</text>
+            <circle cx="20" cy="20" r="16" fill="#fff8e6" stroke="#ffbf6b" stroke-width="2"/>
+          </g>
+        </g>
+      </g>
+
+      <!-- User list -->
+      <rect x="0" y="268" width="276" height="224" rx="12" fill="#ffffff" filter="url(#softShadow)"/>
+      <g transform="translate(16,288)">
+        <text class="small muted font" x="0" y="14">Users</text>
+        <text class="font title" x="0" y="40">Active Users</text>
+
+        <g transform="translate(0,56)" class="small font muted">
+          <g>
+            <circle cx="20" cy="20" r="18" fill="#eef3ff" stroke="#7b6bff" stroke-width="2"/>
+            <text x="56" y="24" fill="#0f1724">Ava Martin</text>
+            <text x="56" y="38" class="muted" font-size="11">Designer</text>
+          </g>
+          <g transform="translate(0,56)">
+            <circle cx="20" cy="20" r="18" fill="#e6fff2" stroke="#10b981" stroke-width="2"/>
+            <text x="56" y="24" fill="#0f1724">Liam Nguyen</text>
+            <text x="56" y="38" class="muted" font-size="11">Engineer</text>
+          </g>
+          <g transform="translate(0,112)">
+            <circle cx="20" cy="20" r="18" fill="#fff8e6" stroke="#ffbf6b" stroke-width="2"/>
+            <text x="56" y="24" fill="#0f1724">Sophia Lee</text>
+            <text x="56" y="38" class="muted" font-size="11">Support</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Footer small -->
+  <g transform="translate(260,760)" class="small muted font">
+    <text x="0" y="0">Last updated: 2026-02-24 09:12 UTC</text>
+  </g>
+
+</svg>

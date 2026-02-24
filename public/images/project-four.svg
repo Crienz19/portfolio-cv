@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Login page remake in green theme">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f6b3e"/>
+      <stop offset="1" stop-color="#0b5b36"/>
+    </linearGradient>
+
+    <!-- Subtle paper / scratch texture generated with turbulence -->
+    <filter id="tex" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="noise"/>
+      <feColorMatrix in="noise" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.18" result="alphaNoise"/>
+      <feBlend in="SourceGraphic" in2="alphaNoise" mode="multiply"/>
+    </filter>
+
+    <!-- Soft vignette -->
+    <radialGradient id="vignette" cx="50%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.18"/>
+    </radialGradient>
+
+    <!-- Accent neon-ish gradient -->
+    <linearGradient id="neon" x1="0" x2="1">
+      <stop offset="0" stop-color="#5fff2d"/>
+      <stop offset="1" stop-color="#14d64a"/>
+    </linearGradient>
+
+    <!-- Rounded card shadow -->
+    <filter id="cardShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="10" stdDeviation="20" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+
+    <style>
+      .sans { font-family: "Inter", "Helvetica Neue", Arial, sans-serif; }
+      .headline { fill: #ffffff; font-size:48px; font-weight:700; letter-spacing:0.4px; }
+      .subhead { fill: rgba(255,255,255,0.9); font-size:18px; }
+      .input-label { fill:#d9fff0; font-size:13px; }
+      .muted { fill: rgba(255,255,255,0.75); font-size:13px; }
+      .input { fill: rgba(255,255,255,0.03); stroke: rgba(255,255,255,0.34); stroke-width:2; rx:14; }
+      .placeholder { fill: rgba(255,255,255,0.6); font-size:14px; }
+      .cta { fill: url(#neon); rx:26; }
+      .cta-text { fill:#041809; font-weight:700; font-size:16px; }
+      .smalllink { fill:#d9ffdf; text-decoration: underline; font-size:12px; }
+    </style>
+  </defs>
+
+  <!-- Full background -->
+  <rect x="0" y="0" width="1400" height="900" fill="url(#bgGrad)"/>
+
+  <!-- Decorative abstract emblem (different from any national emblem) -->
+  <g transform="translate(80,360) rotate(-18)">
+    <!-- semi-transparent geometric fan -->
+    <g opacity="0.12">
+      <rect x="-10" y="-160" width="380" height="72" rx="8" fill="#0b6b44" transform="rotate(-6)"/>
+      <rect x="40" y="-80" width="380" height="72" rx="8" fill="#0b6b44" transform="rotate(6)"/>
+      <rect x="120" y="-5" width="380" height="72" rx="8" fill="#0b6b44" transform="rotate(18)"/>
+      <circle cx="220" cy="80" r="180" fill="#0b6b44"/>
+    </g>
+  </g>
+
+  <!-- Texture overlay (subtle) -->
+  <rect x="0" y="0" width="1400" height="900" fill="transparent" filter="url(#tex)"/>
+
+  <!-- Vignette -->
+  <rect x="0" y="0" width="1400" height="900" fill="url(#vignette)" style="mix-blend-mode: multiply;"/>
+
+  <!-- Center column -->
+  <g transform="translate(0,0)">
+    <!-- Headline and small tagline -->
+    <g transform="translate(0,60)">
+      <text x="50%" y="40" class="sans headline" text-anchor="middle">Mag-login na, Ka-Tibay!</text>
+      <text x="50%" y="90" class="sans subhead" text-anchor="middle">Mas astig. Mas local. Mas secure.</text>
+    </g>
+
+    <!-- Form container (transparent card) -->
+    <g transform="translate(400,200)">
+      <rect x="0" y="0" width="600" height="460" rx="22" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" filter="url(#cardShadow)"/>
+      <!-- left decorative strip -->
+      <rect x="0" y="0" width="44" height="460" rx="22" fill="rgba(95,255,45,0.06)"/>
+      <!-- Inner content -->
+      <g transform="translate(56,40)">
+        <text x="0" y="0" class="sans input-label">Username</text>
+        <rect class="input" x="0" y="12" width="488" height="56" />
+        <text x="18" y="48" class="sans placeholder">Enter username</text>
+
+        <text x="0" y="100" class="sans input-label">Password</text>
+        <rect class="input" x="0" y="112" width="488" height="56" />
+        <text x="18" y="148" class="sans placeholder">Enter password</text>
+
+        <g transform="translate(0,192)">
+          <text x="0" y="0" class="sans smalllink">Nakalimutan ang username? Click here</text>
+        </g>
+
+        <!-- success-like notification placeholder (but generic) -->
+        <g transform="translate(0,228)">
+          <rect x="0" y="0" width="488" height="56" rx="8" fill="rgba(0,0,0,0.35)" stroke="rgba(255,255,255,0.04)"/>
+          <g transform="translate(14,12)">
+            <circle cx="18" cy="18" r="16" fill="#2fd87a"/>
+            <text x="48" y="22" class="sans muted">Connection OK</text>
+          </g>
+        </g>
+
+        <!-- Submit CTA -->
+        <g transform="translate(0,312)">
+          <rect class="cta" x="0" y="0" width="488" height="64" />
+          <text x="244" y="42" text-anchor="middle" class="sans cta-text">SUBMIT</text>
+        </g>
+
+        <!-- small footer links inside card -->
+        <g transform="translate(0,392)">
+          <text class="sans muted">© 2026 Example Corp — <tspan fill="#d9ffdf">Privacy</tspan> • <tspan fill="#d9ffdf">Terms</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom thin footer band -->
+  <rect x="0" y="860" width="1400" height="40" fill="rgba(0,0,0,0.45)"/>
+  <text x="50%" y="888" text-anchor="middle" class="sans muted">GOVERNMENT WARNING: CIGARETTE SMOKING IS DANGEROUS TO YOUR HEALTH.</text>
+</svg>

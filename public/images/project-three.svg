@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Game launcher application mockup - gamer style with background (fixed)">
+  <defs>
+    <linearGradient id="darkBg" x1="0" x2="1">
+      <stop offset="0" stop-color="#0b0f17"/>
+      <stop offset="1" stop-color="#0b1220"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#4f8cff"/>
+      <stop offset="1" stop-color="#7b6bff"/>
+    </linearGradient>
+    <radialGradient id="heroGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0" stop-color="#2b3cff" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#0b1220" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="28" flood-color="#000" flood-opacity="0.6"/>
+    </filter>
+    <style>
+      .font { font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+      .title { fill: #e6eefc; font-weight:700; font-size:20px; }
+      .muted { fill: #98a0b1; font-size:12px; }
+      .small { fill:#b7bfd0; font-size:11px; }
+      .btn-primary { fill: url(#accent); rx:12; }
+      .ghost { fill: none; stroke: rgba(255,255,255,0.06); stroke-width:1; }
+      .tile-title { fill:#eaf2ff; font-weight:700; font-size:13px; }
+      .tile-sub { fill:#98a0b1; font-size:11px; }
+      .badge { rx:8; fill:#10151b; stroke: rgba(255,255,255,0.04); }
+    </style>
+  </defs>
+
+  <!-- Full-canvas background (non-transparent) -->
+  <rect x="0" y="0" width="1400" height="900" fill="url(#darkBg)"/>
+
+  <!-- Dark app shell -->
+  <rect x="12" y="12" width="1376" height="876" rx="18" fill="transparent" filter="url(#softShadow)"/>
+
+  <!-- Topbar (compact) -->
+  <g transform="translate(36,32)">
+    <text class="font title" x="0" y="10">GameHub</text>
+    <g transform="translate(300, -6)">
+      <rect x="0" y="0" width="520" height="36" rx="10" fill="#071029" stroke="rgba(255,255,255,0.03)"/>
+      <text class="muted font" x="16" y="24">Search games, players, news...</text>
+    </g>
+    <g transform="translate(1180, -6)">
+      <rect x="-120" y="0" width="100" height="36" rx="10" class="btn-primary"/>
+      <text class="font" x="-86" y="24" fill="#041426">Store</text>
+    </g>
+  </g>
+
+  <!-- Left compact navigation (icons only) -->
+  <g transform="translate(36,90)">
+    <g transform="translate(0,0)">
+      <rect x="0" y="0" width="64" height="680" rx="12" fill="rgba(255,255,255,0.02)"/>
+      <!-- icons (circles) -->
+      <circle cx="32" cy="36" r="14" fill="#223042"/>
+      <circle cx="32" cy="96" r="12" fill="#18232f"/>
+      <circle cx="32" cy="156" r="12" fill="#18232f"/>
+      <circle cx="32" cy="216" r="12" fill="#18232f"/>
+      <circle cx="32" cy="276" r="12" fill="#18232f"/>
+      <rect x="8" y="480" width="48" height="120" rx="8" fill="#0f1724" stroke="rgba(255,255,255,0.02)"/>
+      <text class="small font" x="8" y="564" fill="#8fa3c6">Friends</text>
+    </g>
+  </g>
+
+  <!-- Main area -->
+  <g transform="translate(120,110)">
+    <!-- Featured hero (big artwork) -->
+    <g>
+      <rect x="0" y="0" width="920" height="380" rx="14" fill="#071227" stroke="rgba(255,255,255,0.03)"/>
+      <!-- hero artwork placeholder -->
+      <rect x="16" y="16" width="560" height="348" rx="10" fill="#0f1724"/>
+      <rect x="16" y="16" width="560" height="348" rx="10" fill="url(#heroGlow)" opacity="0.9"/>
+
+      <!-- hero details -->
+      <g transform="translate(600,40)">
+        <text class="title font" x="0" y="0">Legend of Aether</text>
+        <text class="muted font" x="0" y="28">Open-world fantasy • 2026 • 4.8 ★</text>
+
+        <!-- big Play button -->
+        <g transform="translate(0,44)">
+          <rect class="btn-primary" x="0" y="0" width="168" height="56" rx="12"/>
+          <text class="font" x="50" y="36" fill="#041426" font-weight="700">Play</text>
+
+          <rect x="184" y="8" width="140" height="40" rx="10" class="badge"/>
+          <text class="small font" x="200" y="34">Installed • 12.4 GB</text>
+        </g>
+
+        <text class="small font" x="0" y="120">New DLC: 'Skyward Isles' — available now. Version 1.12 includes performance updates and extra quests.</text>
+      </g>
+
+      <!-- Spotlight carousel (small tiles) -->
+      <g transform="translate(16,380)">
+        <rect x="0" y="0" width="920" height="88" rx="12" fill="transparent"/>
+        <g transform="translate(8,8)">
+          <!-- small carousel tiles -->
+          <g transform="translate(0,0)">
+            <rect x="0" y="0" width="156" height="72" rx="8" fill="#0f1a24" stroke="rgba(255,255,255,0.02)"/>
+            <text class="tile-title font" x="12" y="46">Frostfall Event</text>
+          </g>
+          <g transform="translate(166,0)">
+            <rect x="0" y="0" width="156" height="72" rx="8" fill="#141923" stroke="rgba(255,255,255,0.02)"/>
+            <text class="tile-title font" x="12" y="46">Summer Sale</text>
+          </g>
+          <g transform="translate(332,0)">
+            <rect x="0" y="0" width="156" height="72" rx="8" fill="#10141a" stroke="rgba(255,255,255,0.02)"/>
+            <text class="tile-title font" x="12" y="46">Indie Spotlight</text>
+          </g>
+          <g transform="translate(498,0)">
+            <rect x="0" y="0" width="156" height="72" rx="8" fill="#0e1418" stroke="rgba(255,255,255,0.02)"/>
+            <text class="tile-title font" x="12" y="46">VR Highlights</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Library grid -->
+    <g transform="translate(0,500)">
+      <text class="muted font" x="0" y="18">Library</text>
+      <text class="title font" x="0" y="42">Your Games</text>
+
+      <g transform="translate(0,60)">
+        <!-- grid row 1 -->
+        <g transform="translate(0,0)">
+          <rect x="0" y="0" width="200" height="120" rx="12" fill="#081020" stroke="rgba(255,255,255,0.03)"/>
+          <rect x="12" y="12" width="176" height="64" rx="8" fill="#11141a"/>
+          <text class="tile-title font" x="12" y="92">Space Rift</text>
+          <text class="tile-sub font" x="12" y="110">Action • 2.1GB</text>
+        </g>
+
+        <g transform="translate(220,0)">
+          <rect x="0" y="0" width="200" height="120" rx="12" fill="#081020" stroke="rgba(255,255,255,0.03)"/>
+          <rect x="12" y="12" width="176" height="64" rx="8" fill="#111417"/>
+          <text class="tile-title font" x="12" y="92">Rogue Quest</text>
+          <text class="tile-sub font" x="12" y="110">RPG • 1.8GB</text>
+        </g>
+
+        <g transform="translate(440,0)">
+          <rect x="0" y="0" width="200" height="120" rx="12" fill="#081020" stroke="rgba(255,255,255,0.03)"/>
+          <rect x="12" y="12" width="176" height="64" rx="8" fill="#131718"/>
+          <text class="tile-title font" x="12" y="92">Racing Elite</text>
+          <text class="tile-sub font" x="12" y="110">Racer • 5.2GB</text>
+        </g>
+
+        <g transform="translate(660,0)">
+          <rect x="0" y="0" width="200" height="120" rx="12" fill="#081020" stroke="rgba(255,255,255,0.03)"/>
+          <rect x="12" y="12" width="176" height="64" rx="8" fill="#14161a"/>
+          <text class="tile-title font" x="12" y="92">City Builder</text>
+          <text class="tile-sub font" x="12" y="110">Simulation • 3.4GB</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Right column small panels: downloads, friends -->
+    <g transform="translate(960,0)">
+      <!-- Downloads -->
+      <rect x="0" y="0" width="320" height="220" rx="12" fill="#071227" stroke="rgba(255,255,255,0.03)"/>
+      <g transform="translate(16,16)">
+        <text class="muted font" x="0" y="14">Downloads</text>
+        <text class="title font" x="0" y="36">Active Queue</text>
+
+        <g transform="translate(0,56)" class="small font">
+          <rect x="0" y="0" width="288" height="56" rx="8" fill="#0b151c"/>
+          <text x="12" y="28" fill="#eaf2ff">Rogue Quest — 1.2GB (56%)</text>
+          <rect x="12" y="36" width="200" height="6" rx="3" fill="#071029"/>
+          <rect x="12" y="36" width="112" height="6" rx="3" fill="url(#accent)"/>
+        </g>
+      </g>
+
+      <!-- Friends -->
+      <rect x="0" y="244" width="320" height="344" rx="12" fill="#071227" stroke="rgba(255,255,255,0.03)"/>
+      <g transform="translate(16,260)">
+        <text class="muted font" x="0" y="14">Social</text>
+        <text class="title font" x="0" y="36">Friends &amp; Party</text>
+
+        <g transform="translate(0,64)" class="small font">
+          <g>
+            <circle cx="20" cy="20" r="18" fill="#243149"/>
+            <text x="48" y="24" fill="#eaf2ff">Ava</text>
+            <text x="48" y="40" class="muted">In Game • Legend of Aether</text>
+          </g>
+          <g transform="translate(0,56)">
+            <circle cx="20" cy="20" r="18" fill="#203035"/>
+            <text x="48" y="24" fill="#eaf2ff">Liam</text>
+            <text x="48" y="40" class="muted">Online • Idle</text>
+          </g>
+          <g transform="translate(0,112)">
+            <circle cx="20" cy="20" r="18" fill="#302622"/>
+            <text x="48" y="24" fill="#eaf2ff">Sophia</text>
+            <text x="48" y="40" class="muted">In Lobby</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Footer small -->
+  <g transform="translate(120,820)" class="small font">
+    <text x="0" y="0" fill="#88a0c8">Last updated: 2026-02-24 09:12 UTC — Gamer launcher mockup</text>
+  </g>
+</svg>

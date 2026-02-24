@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Internal HR Admin Dashboard mockup">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071824"/>
+      <stop offset="1" stop-color="#0b3350"/>
+    </linearGradient>
+
+    <!-- Accent -->
+    <linearGradient id="accent" x1="0" x2="1">
+      <stop offset="0" stop-color="#39c0ff"/>
+      <stop offset="1" stop-color="#1fa7d8"/>
+    </linearGradient>
+
+    <!-- Card shadow -->
+    <filter id="cardShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Soft noise -->
+    <filter id="noise" x="-50%" y="-50%" width="200%" height="200%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix"
+        values="0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0 0
+                0 0 0 0.04" />
+      <feBlend in="SourceGraphic"/>
+    </filter>
+
+    <style>
+      .ui { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+      .title { fill: #ffffff; font-size:20px; font-weight:700; }
+      .muted { fill: rgba(255,255,255,0.75); font-size:13px; }
+      .muted-sm { fill: rgba(255,255,255,0.65); font-size:12px; }
+      .card { rx:12; fill:#ffffff; }
+      .card-dark { rx:12; fill: rgba(255,255,255,0.04); }
+      .metric-num { fill:#ffffff; font-size:22px; font-weight:700; }
+      .metric-label { fill: rgba(255,255,255,0.85); font-size:12px; }
+      .accent-btn { fill: url(#accent); rx:8; }
+      .table-text { fill:#0b2b36; font-size:13px; }
+      .chip { rx:8; fill: rgba(31,167,216,0.12); stroke: rgba(31,167,216,0.18); }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1400" height="900" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1400" height="900" fill="transparent" filter="url(#noise)"/>
+
+  <!-- Left sidebar -->
+  <rect x="20" y="20" width="240" height="860" rx="16" fill="rgba(255,255,255,0.03)" filter="url(#cardShadow)"/>
+  <g transform="translate(44,48)">
+    <text class="ui title" x="0" y="0">HR Admin</text>
+    <g transform="translate(0,36)" class="ui muted-sm">
+      <text x="0" y="28">Dashboard</text>
+      <text x="0" y="64">Filings</text>
+      <text x="0" y="100">Approvals</text>
+      <text x="0" y="136">Employees</text>
+      <text x="0" y="172">Reports</text>
+      <text x="0" y="208">Settings</text>
+    </g>
+    <!-- small footer -->
+    <text x="0" y="720" class="ui muted-sm">hr.company.local</text>
+  </g>
+
+  <!-- Topbar -->
+  <rect x="280" y="20" width="1100" height="64" rx="12" fill="rgba(255,255,255,0.03)" filter="url(#cardShadow)"/>
+  <g transform="translate(300,40)">
+    <text class="ui title" x="0" y="0">Overview</text>
+    <g transform="translate(520, -8)">
+      <rect x="0" y="0" width="340" height="40" rx="10" fill="#072235"/>
+      <text class="ui muted" x="14" y="26">Search filings, employees, or IDs...</text>
+    </g>
+    <g transform="translate(920, -8)">
+      <rect x="0" y="0" width="120" height="40" rx="10" class="accent-btn"/>
+      <text class="ui title" x="60" y="26" text-anchor="middle" style="font-size:13px; fill:#02121a">New Request</text>
+    </g>
+  </g>
+
+  <!-- Main content -->
+  <g transform="translate(280,104)">
+    <!-- Metrics row -->
+    <g>
+      <rect x="0" y="0" width="1100" height="120" rx="12" fill="transparent"/>
+
+      <!-- Metric 1 -->
+      <rect x="0" y="0" width="260" height="100" rx="12" class="card-dark" fill="rgba(255,255,255,0.04)" filter="url(#cardShadow)"/>
+      <g transform="translate(18,18)">
+        <text class="metric-num ui">1,248</text>
+        <text class="metric-label ui" x="0" y="34">Open Filings</text>
+      </g>
+
+      <!-- Metric 2 -->
+      <rect x="288" y="0" width="260" height="100" rx="12" class="card-dark" fill="rgba(255,255,255,0.04)" filter="url(#cardShadow)"/>
+      <g transform="translate(306,18)">
+        <text class="metric-num ui">86</text>
+        <text class="metric-label ui" x="0" y="34">Pending Approvals</text>
+      </g>
+
+      <!-- Metric 3 -->
+      <rect x="576" y="0" width="260" height="100" rx="12" class="card-dark" fill="rgba(255,255,255,0.04)" filter="url(#cardShadow)"/>
+      <g transform="translate(594,18)">
+        <text class="metric-num ui">432</text>
+        <text class="metric-label ui" x="0" y="34">Requests This Month</text>
+      </g>
+
+      <!-- Metric 4 -->
+      <rect x="864" y="0" width="236" height="100" rx="12" class="card-dark" fill="rgba(255,255,255,0.04)" filter="url(#cardShadow)"/>
+      <g transform="translate(882,18)">
+        <text class="metric-num ui">12</text>
+        <text class="metric-label ui" x="0" y="34">Active Approvers</text>
+      </g>
+    </g>
+
+    <!-- Charts & approvals -->
+    <g transform="translate(0,140)">
+      <!-- Left: Line chart card -->
+      <rect x="0" y="0" width="720" height="300" rx="12" fill="#072235" filter="url(#cardShadow)"/>
+      <g transform="translate(18,16)">
+        <text class="ui title" x="0" y="0" style="font-size:16px">Requests Over Time</text>
+        <text class="ui muted-sm" x="0" y="22">Last 30 days</text>
+
+        <!-- chart background -->
+        <rect x="0" y="36" width="684" height="232" rx="8" fill="rgba(255,255,255,0.02)"/>
+        <!-- grid lines -->
+        <g transform="translate(12,44)" stroke="rgba(255,255,255,0.03)">
+          <line x1="0" y1="30" x2="660" y2="30"/>
+          <line x1="0" y1="70" x2="660" y2="70"/>
+          <line x1="0" y1="110" x2="660" y2="110"/>
+          <line x1="0" y1="150" x2="660" y2="150"/>
+        </g>
+        <!-- sparkline -->
+        <polyline points="12,168 84,140 156,124 228,96 300,120 372,88 444,100 516,72 588,84 660,56"
+                  transform="translate(0, -32)" fill="none" stroke="url(#accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Right: Approval queue + actions -->
+      <g transform="translate(744,0)">
+        <rect x="0" y="0" width="356" height="300" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
+        <g transform="translate(18,16)">
+          <text class="ui title" x="0" y="0" style="font-size:16px; fill:#042233">Approval Queue</text>
+          <text class="ui muted-sm" x="0" y="22">Top pending requests</text>
+
+          <!-- queue items -->
+          <g transform="translate(0,40)" class="ui">
+            <g>
+              <rect x="0" y="0" width="320" height="56" rx="8" fill="rgba(4,34,51,0.03)"/>
+              <text x="12" y="22" class="muted-sm">Ava M. — Leave (2 days)</text>
+              <text x="12" y="40" class="muted-sm" style="font-size:11px; fill:#1fa7d8">Awaiting Manager</text>
+            </g>
+            <g transform="translate(0,72)">
+              <rect x="0" y="0" width="320" height="56" rx="8" fill="rgba(4,34,51,0.03)"/>
+              <text x="12" y="22" class="muted-sm">Liam N. — Expense $320</text>
+              <text x="12" y="40" class="muted-sm" style="font-size:11px; fill:#f39c12">Awaiting Finance</text>
+            </g>
+            <g transform="translate(0,144)">
+              <rect x="0" y="0" width="320" height="56" rx="8" fill="rgba(4,34,51,0.03)"/>
+              <text x="12" y="22" class="muted-sm">Sophia L. — Access Request</text>
+              <text x="12" y="40" class="muted-sm" style="font-size:11px; fill:#1fa7d8">Awaiting IT</text>
+            </g>
+          </g>
+
+          <!-- action buttons -->
+          <g transform="translate(0,236)">
+            <rect x="0" y="0" width="150" height="44" rx="8" class="accent-btn"/>
+            <text x="75" y="30" text-anchor="middle" class="ui title" style="font-size:13px; fill:#02121a">Review All</text>
+            <rect x="170" y="0" width="150" height="44" rx="8" fill="#072235" stroke="rgba(255,255,255,0.04)"/>
+            <text x="245" y="30" text-anchor="middle" class="ui muted-sm">Bulk Actions</text>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Tables row -->
+    <g transform="translate(0,464)">
+      <!-- Recent Filings table -->
+      <rect x="0" y="0" width="560" height="300" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
+      <g transform="translate(18,18)">
+        <text class="ui title" x="0" y="0" style="font-size:16px; fill:#042233">Recent Filings</text>
+        <text class="ui muted-sm" x="0" y="22">Latest requests and status</text>
+
+        <g transform="translate(0,44)" class="ui">
+          <g>
+            <rect x="0" y="0" width="524" height="44" rx="8" fill="rgba(4,34,51,0.02)"/>
+            <text x="12" y="28" class="table-text">Ava M. — Sick Leave</text>
+            <text x="480" y="28" text-anchor="end" class="table-text">Approved</text>
+          </g>
+          <g transform="translate(0,56)">
+            <rect x="0" y="0" width="524" height="44" rx="8" fill="rgba(4,34,51,0.02)"/>
+            <text x="12" y="28" class="table-text">Liam N. — Expense</text>
+            <text x="480" y="28" text-anchor="end" class="table-text">Pending</text>
+          </g>
+          <g transform="translate(0,112)">
+            <rect x="0" y="0" width="524" height="44" rx="8" fill="rgba(4,34,51,0.02)"/>
+            <text x="12" y="28" class="table-text">Sophia L. — Access</text>
+            <text x="480" y="28" text-anchor="end" class="table-text">In Review</text>
+          </g>
+        </g>
+      </g>
+
+      <!-- Employee panel -->
+      <rect x="584" y="0" width="516" height="300" rx="12" fill="#ffffff" filter="url(#cardShadow)"/>
+      <g transform="translate(602,18)">
+        <text class="ui title" x="0" y="0" style="font-size:16px; fill:#042233">Team Directory</text>
+        <text class="ui muted-sm" x="0" y="22">Search and quick actions</text>
+
+        <g transform="translate(0,44)" class="ui">
+          <g>
+            <circle cx="24" cy="24" r="20" fill="#1fa7d8"/>
+            <text x="56" y="28" class="table-text">Ava Martin</text>
+            <text x="56" y="46" class="muted-sm">Editor • ava@company.local</text>
+          </g>
+          <g transform="translate(0,72)">
+            <circle cx="24" cy="24" r="20" fill="#39c0ff"/>
+            <text x="56" y="28" class="table-text">Liam Nguyen</text>
+            <text x="56" y="46" class="muted-sm">Finance • liam@company.local</text>
+          </g>
+          <g transform="translate(0,144)">
+            <circle cx="24" cy="24" r="20" fill="#77d7ff"/>
+            <text x="56" y="28" class="table-text">Sophia Lee</text>
+            <text x="56" y="46" class="muted-sm">HR • sophia@company.local</text>
+          </g>
+        </g>
+
+        <!-- small actions -->
+        <g transform="translate(0,228)">
+          <rect x="0" y="0" width="156" height="36" rx="8" class="accent-btn"/>
+          <text x="78" y="24" text-anchor="middle" class="ui title" style="font-size:13px; fill:#02121a">Invite Member</text>
+          <rect x="176" y="0" width="156" height="36" rx="8" fill="#072235" stroke="rgba(255,255,255,0.04)"/>
+          <text x="254" y="24" text-anchor="middle" class="ui muted-sm">Export CSV</text>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <rect x="0" y="860" width="1400" height="40" fill="rgba(0,0,0,0.35)"/>
+  <text x="700" y="888" text-anchor="middle" class="ui muted-sm">© 2026 Internal Systems — For internal use only</text>
+</svg>
