@@ -10,7 +10,7 @@ defineProps<{ skill: Skill }>()
       {{ skill.name }}
     </span>
     <!-- Level dots -->
-    <div class="flex items-center gap-1 shrink-0">
+    <div class="flex items-center gap-1 shrink-0" v-if="skill.levelVisible">
       <span
         v-for="n in 5"
         :key="n"

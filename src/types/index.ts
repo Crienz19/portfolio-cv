@@ -7,6 +7,7 @@ export interface SkillCategory {
 export interface Skill {
   name: string
   level: number // 1-5
+  levelVisible: boolean
 }
 
 export interface WorkExperience {
